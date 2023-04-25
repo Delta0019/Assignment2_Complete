@@ -53,10 +53,10 @@ public class Controller implements Initializable {
   public void initialize(URL url, ResourceBundle resourceBundle){
         try {
             //Establish I/O Stream.
-            serverSocket = new Socket("localhost", 10086);
-            dos=new DataOutputStream(serverSocket.getOutputStream());
-            dis=new DataInputStream(serverSocket.getInputStream());
-            Thread announcement=new Thread(new announcement());
+      serverSocket = new Socket("localhost", 10086);
+      dos=new DataOutputStream(serverSocket.getOutputStream());
+      dis=new DataInputStream(serverSocket.getInputStream());
+      Thread announcement=new Thread(new announcement());
             announcement.start();
             //Wait for current username is refresh.
             while(!flag){
